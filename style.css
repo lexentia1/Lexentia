@@ -1,0 +1,325 @@
+/* Variables para colores para fácil edición */
+:root {
+    --dark-blue: #0F1626; /* Azul marino oscuro del logo */
+    --off-white: #EAE6D8; /* Tono crema/hueso del logo */
+    --accent-color: #6C7A89; /* Un gris azulado suave para detalles, puedes cambiarlo */
+    --text-color-dark: #333333; /* Para texto sobre fondos claros */
+}
+
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--off-white); /* Color de texto por defecto para fondos oscuros */
+    background-color: var(--dark-blue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--off-white);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.2em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.primary-btn {
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+    border: 2px solid var(--off-white);
+}
+
+.primary-btn:hover {
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+    border-color: var(--off-white);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    margin-top: 30px; /* Separación del grid de servicios */
+}
+
+.secondary-btn:hover {
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
+/* Secciones generales */
+.section {
+    padding: 80px 0;
+}
+
+/* Hero Section (Cabecera Principal) */
+.hero-section {
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la vista */
+    position: relative; /* Para posicionar el logo */
+}
+
+.hero-section .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px; /* Ajusta el tamaño del logo si es necesario */
+    height: auto;
+}
+
+.hero-section .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-section h1 {
+    font-size: 4.5em; /* Más grande para el hero */
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section p {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+/* Why Lexentia Section */
+.why-lexentia-section {
+    background-color: var(--off-white); /* Fondo claro para contraste */
+    color: var(--text-color-dark); /* Texto oscuro sobre fondo claro */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.why-lexentia-section h2 {
+    color: var(--dark-blue);
+}
+
+.why-lexentia-section p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--dark-blue);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-item {
+    background-color: rgba(255, 255, 255, 0.05); /* Ligeramente transparente para efecto */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-item .icon {
+    font-size: 3em;
+    color: var(--off-white);
+    margin-bottom: 15px;
+    display: block; /* Asegura que el icono esté centrado */
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: var(--off-white);
+}
+
+.service-item p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--off-white); /* Fondo claro para la sección de contacto */
+    color: var(--text-color-dark);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--dark-blue);
+}
+
+.contact-section p {
+    color: var(--text-color-dark);
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que se ajusten en pantallas pequeñas */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color); /* O un azul más claro */
+}
+
+.contact-item .icon {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--dark-blue); /* Color del icono */
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.footer-nav a {
+    color: var(--off-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries para Responsividad Básica */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-section .logo {
+        position: static; /* Quita el posicionamiento absoluto en móviles */
+        margin-bottom: 20px;
+        width: 150px; /* Ajusta tamaño de logo en móvil */
+    }
+
+    .hero-section {
+        padding-top: 50px; /* Ajusta padding para que el logo no choque con el texto */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
